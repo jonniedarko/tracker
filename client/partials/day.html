@@ -1,0 +1,24 @@
+<div class="container mobile-container" ng-init="setMeals()">
+	<div class="row header-row">
+        <h1 class="">{{ date | momentDate:"DDDD"}}</h1>
+        <div class="fraction-kcals">
+        	<div class="">{{totalKcals}} &#47; {{2600}} </div>
+        </div>
+    </div>
+	<div class="row list-row head-list-row">
+		<div class="col-xs-4" ><span>Meal</span></div>
+		<div class="col-xs-4"><span>Description</span></div>
+		<div class="col-xs-4"><span>kcal</span></div>
+	</div>
+	<div class="row list-row" ng-repeat="meal in meals">	
+		<div class="col-xs-4"><span>{{ meal.name }}</span></div>
+		<div class="col-xs-4"><span>{{ meal.description }}</span></div>
+		<div class="col-xs-4"><span>{{ meal.kcal }}</span></div>
+	</div>
+	<a ng-click="go('/addMeal')">
+	<div class="row list-row btn btn-success col-xs-12" >
+		Add
+	</div>
+	</a>
+
+</div>    		

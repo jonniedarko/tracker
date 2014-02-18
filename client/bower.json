@@ -1,0 +1,17 @@
+{
+  "name": "test-client",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "momentjs": "~2.5.1"
+  }
+}
