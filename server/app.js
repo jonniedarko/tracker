@@ -1,15 +1,23 @@
-'use strict';
 
-angular.module('myApp', [
-    'ngTouch',
-    'ngRoute',
-    'ngAnimate',
-    'myApp.controllers',
-    'myApp.memoryServices'
-]).
-config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/employees', {templateUrl: 'partials/employee-list.html', controller: 'EmployeeListCtrl'});
-    $routeProvider.when('/employees/:employeeId', {templateUrl: 'partials/employee-detail.html', controller: 'EmployeeDetailCtrl'});
-    $routeProvider.when('/employees/:employeeId/reports', {templateUrl: 'partials/report-list.html', controller: 'ReportListCtrl'});
-    $routeProvider.otherwise({redirectTo: '/employees'});
-}]);
+/**
+ * Module dependencies.
+ */
+
+var express = require('express');
+var routes = require('./routes');
+var user = require('./routes/user');
+var path = require('path');
+
+var app = express();
+app.use(express.bodyParser());
+app.use(express.static(path.join(__dirname, '../client')));
+
+// development only
+if ('development' == app.get('env')) {
+  app.use(express.errorHandler());
+}
+
+app.get('/', routes.index);
+app.get('/users', user.list);
+app.listen(3001);
+console.log('Listening on port 3001...');
