@@ -1,16 +1,35 @@
-<div class="container mobile-container" ng-init="setMeals()">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="row header-row">
-        <h1 class="">{{ date | momentDate:"DDDD"}}</h1>
-        <div class="fraction-kcals">
-        	<div class="">{{totalKcals}} &#47; {{2600}} </div>
-        </div>
-    </div>
+		<h1 class="">{{ date | momentDate:"DDDD"}}</h1>
+		<div class="fraction-kcals">
+			<div class="">{{totalKcals}} &#47; {{2600}} </div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<!-- REF: http://stackoverflow.com/questions/21199760/how-do-i-create-iphone-style-bottom-navbar-with-custom-gylph-icons-for-my-bootst -->
+		<div class="col-xs-4 text-center">
+			<a ng-click="back()" href=""><i class="glyphicon glyphicon-circle-arrow-left" ></i><br>Back
+	      	</a>
+		</div>
+		<div class="col-xs-4 text-center">
+			<a href="#"><i class="glyphicon glyphicon-circle-arrow-down"></i><br>Link
+			</a>
+		</div>
+		<div class="col-xs-4 text-center">
+			<a href="#"><i class="glyphicon glyphicon-circle-arrow-right"></i><br>Link
+			</a>
+		</div>
+	</div>
+	
+</nav>
+<div class="container mobile-container" ng-init="setMeals()">
+	
 	<div class="row list-row head-list-row">
 		<div class="col-xs-4" ><span>Meal</span></div>
 		<div class="col-xs-4"><span>Description</span></div>
 		<div class="col-xs-4"><span>kcal</span></div>
 	</div>
-	<div class="row list-row" ng-repeat="meal in meals">	
+	<div class="row list-row" ng-repeat="meal in meals">
 		<div class="col-xs-4"><span>{{ meal.name }}</span></div>
 		<div class="col-xs-4"><span>{{ meal.description }}</span></div>
 		<div class="col-xs-4"><span>{{ meal.kcal }}</span></div>
@@ -20,5 +39,4 @@
 		Add
 	</div>
 	</a>
-
-</div>    		
+</div>
