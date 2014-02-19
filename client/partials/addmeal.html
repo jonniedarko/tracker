@@ -1,89 +1,96 @@
-<div class="row header-row affix-top">
-    <div class="">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="row header-row">
+      <div class="">
         <h1 class="">Add Meal</h1>
     </div>
-</div>
 
+  </div>
+  <div class="container-fluid">
+    <!-- REF: http://stackoverflow.com/questions/21199760/how-do-i-create-iphone-style-bottom-navbar-with-custom-gylph-icons-for-my-bootst -->
+    <div class="col-xs-4 text-center">
+      <a ng-click="back()" href=""><i class="glyphicon glyphicon-circle-arrow-left" ></i><br>Link
+      </a>
+    </div>
+    <div class="col-xs-4 text-center">
+      <a href="#"><i class="glyphicon glyphicon-circle-arrow-down"></i><br>Link
+      </a>
+    </div>
+    <div class="col-xs-4 text-center">
+      <a href="#"><i class="glyphicon glyphicon-circle-arrow-right"></i><br>Link
+      </a>
+    </div>
+  </div>
+  
+</nav>
 <div class="" style="padding: 10px;">
   <form class="form-horizontal">
-<fieldset>
-
-<!-- Form Name -->
-
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="mealSelect">Meal</label>
-  <div class="col-md-6">
-    <select id="mealSelect" name="mealSelect" class="form-control">
-      <option value="custim">Custom..</option>
-    </select>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="mealName">Name</label>  
-  <div class="col-md-6">
-  <input id="mealName" name="mealName" type="text" placeholder="Meal Name" class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="descInput">Description</label>  
-  <div class="col-md-6">
-  <input id="descInput" name="descInput" type="text" placeholder="Meal Description" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="kcalInput">Calories</label>  
-  <div class="col-md-6">
-  <input id="kcalInput" name="kcalInput" type="text" placeholder="Calories (kcals)" class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="proteinInput">Protein</label>  
-  <div class="col-md-6">
-  <input id="proteinInput" name="proteinInput" type="text" placeholder="Protein (g)" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="carbsInput">Carbohydrates</label>  
-  <div class="col-md-6">
-  <input id="carbsInput" name="carbsInput" type="text" placeholder="Carbohydrates (g)" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="fatsInput">Fats</label>  
-  <div class="col-md-6">
-  <input id="fatsInput" name="fatsInput" type="text" placeholder="Fats (g)" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Button (Double) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="addMeal">Add Meal</label>
-  <div class="col-md-8">
-    <button id="addMeal" name="addMeal" class="btn btn-success">Add Meal</button>
-    <button id="cancelAddMeal" name="cancelAddMeal" class="btn btn-danger">Cancel</button>
-  </div>
-</div>
-
-</fieldset>
-</form>
-
+    <fieldset>
+      <!-- Form Name -->
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="mealSelect">Meal</label>
+        <div class="col-md-6">
+          <select id="mealSelect" name="mealSelect" class="form-control">
+            <option value="custim">Custom..</option>
+          </select>
+        </div>
+      </div>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="mealName">Name</label>
+        <div class="col-md-6">
+          <input id="mealName" name="mealName" type="text" placeholder="Meal Name" class="form-control input-md" required="">
+          
+        </div>
+      </div>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="descInput">Description</label>
+        <div class="col-md-6">
+          <input id="descInput" name="descInput" type="text" placeholder="Meal Description" class="form-control input-md">
+          
+        </div>
+      </div>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="kcalInput">Calories</label>
+        <div class="col-md-6">
+          <input id="kcalInput" name="kcalInput" type="text" placeholder="Calories (kcals)" class="form-control input-md" required="">
+          
+        </div>
+      </div>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="proteinInput">Protein</label>
+        <div class="col-md-6">
+          <input id="proteinInput" name="proteinInput" type="text" placeholder="Protein (g)" class="form-control input-md">
+          
+        </div>
+      </div>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="carbsInput">Carbohydrates</label>
+        <div class="col-md-6">
+          <input id="carbsInput" name="carbsInput" type="text" placeholder="Carbohydrates (g)" class="form-control input-md">
+          
+        </div>
+      </div>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="fatsInput">Fats</label>
+        <div class="col-md-6">
+          <input id="fatsInput" name="fatsInput" type="text" placeholder="Fats (g)" class="form-control input-md">
+          
+        </div>
+      </div>
+      <!-- Button (Double) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="addMeal">Add Meal</label>
+        <div class="col-md-8">
+          <button id="addMeal" name="addMeal" class="btn btn-success">Add Meal</button>
+          <button id="cancelAddMeal" name="cancelAddMeal" class="btn btn-danger">Cancel</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
 </div>
