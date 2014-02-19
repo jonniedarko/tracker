@@ -12,6 +12,7 @@
     "tests"
   ],
   "dependencies": {
-    "momentjs": "~2.5.1"
+    "momentjs": "~2.5.1",
+    "bootstrap": "~3.1.1"
   }
 }
