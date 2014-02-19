@@ -5,20 +5,25 @@
 			<div class="">{{totalKcals}} &#47; {{2600}} </div>
 		</div>
 	</div>
-	<div class="container-fluid">
+	<div class="container-fluid nav-container">
 		<!-- REF: http://stackoverflow.com/questions/21199760/how-do-i-create-iphone-style-bottom-navbar-with-custom-gylph-icons-for-my-bootst -->
-		<div class="col-xs-4 text-center">
-			<a ng-click="back()" href=""><i class="glyphicon glyphicon-circle-arrow-left" ></i><br>Back
-	      	</a>
-		</div>
-		<div class="col-xs-4 text-center">
-			<a href="#"><i class="glyphicon glyphicon-circle-arrow-down"></i><br>Link
-			</a>
-		</div>
-		<div class="col-xs-4 text-center">
-			<a href="#"><i class="glyphicon glyphicon-circle-arrow-right"></i><br>Link
-			</a>
-		</div>
+		<a ng-click="back()" href="">
+			<div class="col-xs-4 text-center navOption active">
+				<i class="glyphicon glyphicon-circle-arrow-left" ></i><br>Back
+			</div>
+		</a>
+		<a href="#">
+			<div class="col-xs-4 text-center navOption">
+				<i class="glyphicon glyphicon-circle-arrow-down"></i><br>Link
+				
+			</div>
+		</a>
+		<a href="#">
+			<div class="col-xs-4 text-center navOption">
+				<i class="glyphicon glyphicon-circle-arrow-right"></i><br>Link
+				
+			</div>
+		</a>
 	</div>
 	
 </nav>
