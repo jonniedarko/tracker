@@ -1,8 +1,8 @@
 var app = angular.module('myApp.controllers', []);
 
-app.controller('MainCtrl', ['$scope', '$rootScope', '$window', '$location', function ($scope, $rootScope, $window, $location) {
-	console.log("DAY: "+moment().format('dddd'));
+app.controller('MainCtrl',['$scope', '$rootScope', '$window', '$location', function ($scope, $rootScope, $window, $location) {
 	$scope.slide = '';
+	$scope.test='HelloWorld';
         $rootScope.back = function() {
           $scope.slide = 'slide-right';
           $window.history.back();

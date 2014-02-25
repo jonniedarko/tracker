@@ -15,6 +15,10 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
+  // for mocha tests
+  //require('grunt-mocha-test')(grunt);
+   grunt.loadNpmTasks('grunt-mocha-test');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -55,7 +59,7 @@ module.exports = function (grunt) {
         }
       },
       jsTest: {
-        files: ['test/spec/{,*/}*.js'],
+        files: ['test/clientSpec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
@@ -107,9 +111,9 @@ module.exports = function (grunt) {
       ],
       test: {
         options: {
-          jshintrc: 'test/.jshintrc'
+          jshintrc: 'test/clientSpec/.jshintrc'
         },
-        src: ['test/spec/{,*/}*.js']
+        src: ['test/clientSpec/{,*/}*.js']
       }
     },
 
@@ -350,6 +354,16 @@ module.exports = function (grunt) {
         singleRun: true
       }
     }
+
+    // Configure a mochaTest task
+    ,mochaTest: {
+      test: {
+        options: {
+          reporter: 'spec'
+        },
+        src: ['test/serverSpec/**/*.js']
+      }
+    }
   });
 
   // Used for delaying livereload until after server has restarted
@@ -393,7 +407,8 @@ module.exports = function (grunt) {
     'clean:server',
     'concurrent:test',
     'autoprefixer',
-    'karma'
+    'karma', 
+    'mochaTest'
   ]);
 
   grunt.registerTask('build', [
@@ -422,4 +437,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+   grunt.registerTask('default', 'mochaTest');
 };
