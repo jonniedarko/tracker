@@ -21,8 +21,8 @@ module.exports = function(config) {
 
       'app/scripts/*.js',
       'app/scripts/**/*.js',
-      'test/clientMock/**/*.js',
-      'test/clientSpec/**/*.js'
+      'test/mock/**/*.js',
+      'test/spec/**/*.js'
     ],
     client: {
       mocha: {

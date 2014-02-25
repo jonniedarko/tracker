@@ -5,6 +5,7 @@ angular.module('myApp', [
     'ngRoute',
     'ngAnimate'
     ,'myApp.filters'
+    ,'myApp.factories'
     ,'myApp.controllers'
 
 ]).

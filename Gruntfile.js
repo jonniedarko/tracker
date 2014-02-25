@@ -59,7 +59,7 @@ module.exports = function (grunt) {
         }
       },
       jsTest: {
-        files: ['test/clientSpec/{,*/}*.js'],
+        files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
@@ -111,9 +111,9 @@ module.exports = function (grunt) {
       ],
       test: {
         options: {
-          jshintrc: 'test/clientSpec/.jshintrc'
+          jshintrc: 'test/spec/.jshintrc'
         },
-        src: ['test/clientSpec/{,*/}*.js']
+        src: ['test/spec/{,*/}*.js']
       }
     },
 

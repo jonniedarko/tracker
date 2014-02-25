@@ -14,15 +14,8 @@ app.controller('MainCtrl',['$scope', '$rootScope', '$window', '$location', funct
 
 	}]);
 
-app.controller('DayListCtrl', ['$scope', function ($scope){
-	$scope.days = [{date: new Date(2014, 2-1, 17), kcals: 2600 }
-					,{ date: new Date(2014, 2-1, 18), kcals: 2500 }
-					,{ date: new Date(2014, 2-1, 19), kcals: 2450 }
-					,{ date: new Date(2014, 2-1, 20), kcals: 2600 }
-					,{ date: new Date(2014, 2-1, 21), kcals: 2199 }
-					,{ date: new Date(2014, 2-1, 22), kcals: 2340 }
-					,{ date: new Date(2014, 2-1, 23), kcals: 1900 }
-				];
+app.controller('DayListCtrl', ['$scope','dayFactory', function ($scope, dayFactory){
+	$scope.days = dayFactory.getAllDays(); 
 }]);
 
 app.controller('DayCtrl', ['$scope', '$routeParams', function ($scope,$routeParams){
